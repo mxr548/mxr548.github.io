@@ -3,7 +3,7 @@
 body {
   font-family: 'PT Sans', sans-serif;
   /*color: #fff;*/
-  background-image: url(purple.jpg);
+  background-image: url("purple-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -15,6 +15,7 @@ body {
   background: rgba(255,255,255,0.9);
   padding: 20px;
   border: 2px solid rgb(64,41,59);
+  position: relative;
 }
 
 a {
@@ -40,6 +41,21 @@ header h1 {
   margin-top: 0;
 }
 
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#branding nav{
+  padding-bottom: 25px;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -47,6 +63,9 @@ main {
   grid-auto-flow: row;
 }
 
+/* main grid setup is based on resume.html */
+
+/* resume styles */
 #education {
   order: 1;
 }
@@ -78,6 +97,71 @@ main {
   margin-top: 0;
 }
 
+/* end resume styles */
+
+
+/* branding styles */
+
+#branding main {
+  grid-row-gap: 75px;
+}
+
+#intro {
+  grid-column: 1 / -1;
+}
+
+#intro img {
+  float: right;
+  margin-left: 20px;
+}
+
+#newsletter {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+#kit {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#newsletter div {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#ben {
+  grid-row: 3;
+  grid-column: 1 / -1;
+}
+
+#ben img {
+  float: left;
+  margin-right: 20px;
+}
+
+#ben p {
+  margin-top: 0;
+}
+
+#kit div {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#newsletter img,
+#kit img,
+#ben img,
+#magazine img {
+  border: 1px solid rgb(127,107,139);
+}
+
+/* end branding style */
+
+#magazine p:first-child {
+  margin-top: 0;
+}
+
 article {
   margin-bottom: 40px;
 }
@@ -88,7 +172,7 @@ article p {
   line-height: 1.5;
 }
 
-article p:last-child {
+#wrapper article p:last-child {
   font-style: italic;
 }
 
@@ -96,4 +180,12 @@ footer {
     background-color: #ddd;
     color: #000000;
     font-size: 10px;
+}
+
+.mrlogo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
 }
